@@ -1,8 +1,7 @@
 %define realname Authen-Htpasswd
 %define name	perl-%{realname}
 %define	modprefix Authen
-
-%define version	0.15
+%define version	0.16
 %define release	%mkrel 1
 
 Summary:	Interface to read and modify Apache .htpasswd files
@@ -19,9 +18,8 @@ BuildRequires:	perl-devel
 BuildRequires:	perl(Class::Accessor::Fast)
 BuildRequires:	perl(Digest)
 BuildRequires:	perl(IO::LockedFile)
-BuildRequires:  perl(Module::Build)
-Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
+Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module provides a convenient, object-oriented interface to Apache-style
@@ -33,15 +31,15 @@ Digest::SHA1 for SHA1.
 %setup -q -n %{realname}-%{version}
 
 %build
-%__perl Build.PL installdirs=vendor
-./Build
+%{__perl} Makefile.PL INSTALLDIRS=vendor
+%make
 
 %check
-./Build test
+make test
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-./Build install destdir=%{buildroot}
+rm -rf %{buildroot}
+%makeinstall_std
 
 %files
 %defattr(-,root,root)
