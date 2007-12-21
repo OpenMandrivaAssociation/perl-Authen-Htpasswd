@@ -19,6 +19,7 @@ BuildRequires:	perl(Class::Accessor::Fast)
 BuildRequires:	perl(Digest)
 BuildRequires:	perl(IO::LockedFile)
 BuildArch:	noarch
+Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module provides a convenient, object-oriented interface to Apache-style
