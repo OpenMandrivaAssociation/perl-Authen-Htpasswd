@@ -2,7 +2,7 @@
 %define name	perl-%{realname}
 %define	modprefix Authen
 %define version	0.16
-%define release	%mkrel 1
+%define release	%mkrel 3
 
 Summary:	Interface to read and modify Apache .htpasswd files
 Name:		%{name}
