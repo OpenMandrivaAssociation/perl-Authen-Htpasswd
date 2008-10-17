@@ -1,8 +1,9 @@
-%define realname Authen-Htpasswd
-%define name	perl-%{realname}
+%define module Authen-Htpasswd
+%define name	perl-%{module}
 %define	modprefix Authen
-%define version	0.16
-%define release	%mkrel 4
+%define version	0.16.1
+%define up_version  0.161
+%define release	%mkrel 1
 
 Summary:	Interface to read and modify Apache .htpasswd files
 Name:		%{name}
@@ -10,19 +11,14 @@ Version:	%{version}
 Release:	%{release}
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{realname}/
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{realname}-%{version}.tar.bz2
-Patch0:		Authen-Htpasswd-0.16-bug27012.diff
-Patch1:		Authen-Htpasswd-0.16-bug37785.diff
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
+URL:		http://search.cpan.org/dist/%{module}/
+Source:     http://www.cpan.org/modules/by-module/Authen/%{module}-%{up_version}.tar.gz
 BuildRequires:	perl(Class::Accessor::Fast)
 BuildRequires:	perl(Digest)
 BuildRequires:	perl(IO::LockedFile)
 BuildRequires:	perl(Crypt::PasswdMD5)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module provides a convenient, object-oriented interface to Apache-style
@@ -31,9 +27,7 @@ well as plain (cleartext) passwords. It requires Crypt::PasswdMD5 for MD5 and
 Digest::SHA1 for SHA1. 
 
 %prep
-%setup -q -n %{realname}-%{version}
-%patch0 -p0
-%patch1 -p0
+%setup -q -n %{module}-%{up_version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
