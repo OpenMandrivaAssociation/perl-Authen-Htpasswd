@@ -1,15 +1,15 @@
 %define upstream_name    Authen-Htpasswd
-%define upstream_version 0.161
+%define upstream_version 0.171
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%perl_convert_version 0.171
+Release:	1
 
 Summary:	Interface to read and modify Apache .htpasswd files
 License:	Artistic/GPL
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Authen/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Authen/Authen-Htpasswd-0.171.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Class::Accessor::Fast)
@@ -97,4 +97,5 @@ make test
 
 * Fri Mar 24 2006 Rafael Garcia-Suarez <rgarciasuarez@mandriva.com> 0.14-1mdk
 - First Mandriva release
+
 
