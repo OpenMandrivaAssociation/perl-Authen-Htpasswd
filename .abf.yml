@@ -1,2 +1,4 @@
+removed_sources:
+  Authen-Htpasswd-0.161.tar.gz: d61455c86f686b32928b9715651485bf533f94d1
 sources:
-  "Authen-Htpasswd-0.161.tar.gz": d61455c86f686b32928b9715651485bf533f94d1
+  Authen-Htpasswd-0.171.tar.gz: eeefb422803f4cb0fb16544e9c3d9b776c0d18fd
