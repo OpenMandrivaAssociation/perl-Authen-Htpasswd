@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 0.171
-Release:	1
+Release:	2
 
 Summary:	Interface to read and modify Apache .htpasswd files
 License:	Artistic/GPL
