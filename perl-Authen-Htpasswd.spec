@@ -8,7 +8,7 @@ Release:	3
 Summary:	Interface to read and modify Apache .htpasswd files
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{upstream_name}/
+URL:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/Authen/Authen-Htpasswd-0.171.tar.gz
 
 BuildRequires:	perl-devel
