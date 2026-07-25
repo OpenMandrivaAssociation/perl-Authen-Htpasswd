@@ -2,14 +2,14 @@
 %define upstream_version 0.171
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 0.171
-Release:	3
+Version:	%{upstream_version}
+Release:	4
 
 Summary:	Interface to read and modify Apache .htpasswd files
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Authen/Authen-Htpasswd-0.171.tar.gz
+URL:		https://metacpan.org/dist/Authen-Htpasswd
+Source0:	https://cpan.metacpan.org/authors/id/M/MS/MSTROUT/Authen-Htpasswd-0.171.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
