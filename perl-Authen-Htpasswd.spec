@@ -1,9 +1,7 @@
 %define upstream_name    Authen-Htpasswd
-%define upstream_version 0.171
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	4
+Version:	0.171
+Release:	5
 
 Summary:	Interface to read and modify Apache .htpasswd files
 License:	Artistic/GPL
@@ -26,7 +24,7 @@ well as plain (cleartext) passwords. It requires Crypt::PasswdMD5 for MD5 and
 Digest::SHA1 for SHA1. 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -51,9 +49,7 @@ make test
 
 * Sat Aug 01 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.161.0-1mdv2011.0
 + Revision: 406255
-- rebuild using %%perl_convert_version
-
-* Fri Oct 17 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.16.1-1mdv2009.1
+- rebuild using %0.171 Fri Oct 17 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.16.1-1mdv2009.1
 + Revision: 294783
 - new version
 - drop patches (merged)
